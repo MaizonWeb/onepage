@@ -1,3 +1,4 @@
+
 (function($) {
     var selector = ".pin";
   
@@ -177,7 +178,30 @@ $('.slideshow-text').slick({
   cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)'
 });
 
-const circleImg = document.querySelector(".circle_rotate");
+
+
+
+// con2 project 
+
+const scrollable = document.querySelector('.scrollable');
+
+let current = 0;
+let target = 0;
+const ease = 0.1;
+
+
+function lerp(start, end, t) {
+  return start * ( 1 - t) + end * t;
+}
+
+function smoothScroll(){
+  target = window.scrollY;
+  current = lerf(current, target, ease);
+  scrollable.style.transform = `translate3d(0, ${-currnet}px, 0)`
+}
+
+smoothScroll();
+
 
 
 
